@@ -27,11 +27,11 @@ export class RegExpression {
         }
     }
 
-    test(input: string): boolean {
+    test(input: string, index: number = 0): boolean {
         this.getSyntaxTree();
 
         const context: IContext = {
-            index: { value: 0 },
+            index: { value: index },
             node: this.syntaxTree as INode,
             input: input,
             match: { length: 0 }
@@ -40,7 +40,7 @@ export class RegExpression {
         return this.walk(context);
     }
 
-    match(input: string): IMatch {
+    match(input: string, index: number = 0): IMatch {
         this.getSyntaxTree();
         const match: IMatch = { length: 0 };
         for (let i = 0; this.groups && i <= this.groups; i++) {
@@ -48,7 +48,7 @@ export class RegExpression {
         }
 
         const context: IContext = {
-            index: { value: 0 },
+            index: { value: index },
             node: this.syntaxTree as INode,
             input: input,
             match: match
