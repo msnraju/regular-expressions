@@ -1,0 +1,35 @@
+{
+  "name": "@msnraju/reg-expressions",
+  "version": "1.0.0",
+  "description": "Custom implementation of regular expressions",
+  "main": "lib/bundle.js",
+  "module": "lib/bundle.es.js",
+  "types": "lib",
+  "scripts": {
+    "build": "rimraf lib && rollup -c",
+    "start": "rm -rf lib && tsc -p . && node ./lib/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/msnraju/regular-expressions.git"
+  },
+  "keywords": [
+    "regular expressions"
+  ],
+  "author": "MSN Raju",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/msnraju/regular-expressions/issues"
+  },
+  "homepage": "https://github.com/msnraju/regular-expressions#readme",
+  "devDependencies": {
+    "@rollup/plugin-commonjs": "^11.0.2",
+    "@rollup/plugin-node-resolve": "^7.1.1",
+    "rimraf": "^3.0.2",
+    "rollup": "^1.31.1",
+    "rollup-plugin-terser": "^5.2.0",
+    "rollup-plugin-typescript2": "^0.26.0",
+    "typescript": "^3.7.5"
+  }
+}
