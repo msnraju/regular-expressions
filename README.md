@@ -9,8 +9,8 @@ npm install @msnraju/regular-expressions
 
 # Usage
 
-```Javascript
-import { RegExpression } from './reg-expression';
+```javascript
+import { RegExpression } from '@msnraju/reg-expressions';
 
 const expr = new RegExpression('OBJECT (\\w*) ([\\d]*) (.*)');
 const match = expr.match('OBJECT Table 18 Customer');
