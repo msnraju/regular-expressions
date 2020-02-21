@@ -1,6 +1,6 @@
 {
   "name": "@msnraju/reg-expressions",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Custom implementation of regular expressions",
   "main": "lib/bundle.js",
   "module": "lib/bundle.es.js",
