@@ -125,13 +125,14 @@ export class RegExpression {
         while (matchCounter < max && matchFunction.bind(this)(context))
             matchCounter++;
 
+        if (matchCounter == 0 && node.alternate)
+            if (this.walk({ ...context, node: node.alternate }))
+                return true;
+
         if (matchCounter >= min && matchCounter <= max)
             return true;
 
         index.value = startIndex;
-        if (node.alternate)
-            return this.walk({ ...context, node: node.alternate });
-
         return false;
     }
 
